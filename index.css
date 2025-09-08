@@ -1,10 +1,104 @@
- /* Estilos para o menu lateral */
- #SETA{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+/* Reset e configurações base QIX Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+:root {
+    --qix-red: #EC062B;
+    --qix-black: #000000;
+    --qix-white: #FFFFFF;
+    --qix-gray: #333333;
+    --qix-light-gray: #f5f5f5;
+    --qix-dark-gray: #1a1a1a;
+    --qix-orange: #FF6B00;
+    --qix-yellow: #FFD700;
+    
+    /* Fontes QIX Style */
+    --font-primary: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    --font-secondary: 'Arial', 'Helvetica', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--qix-gray);
+    background-color: var(--qix-white);
+}
+
+/* Tipografia QIX Style */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Header QIX Style */
+.mobile-header {
+    background: var(--qix-white);
+    padding: 15px 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 3px solid var(--qix-red);
+}
+
+.mobile-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.mobile-header .logo {
+    max-height: clamp(35px, 8vw, 45px);
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Botão hambúrguer QIX Style */
+.hamburger-btn {
+    background: var(--qix-black);
+    border: none;
+    font-size: clamp(18px, 5vw, 22px);
+    color: var(--qix-white);
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.hamburger-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.hamburger-btn:hover::before {
+    left: 100%;
+}
+
+.hamburger-btn:hover {
+    background: var(--qix-red);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(236, 6, 43, 0.4);
+}
+
+/* Sidebar QIX Style */
 .sidebar {
     height: 100vh;
     width: 0;
@@ -12,193 +106,272 @@
     z-index: 1000;
     top: 0;
     left: 0;
-    background: black;
+    background: linear-gradient(180deg, var(--qix-black) 0%, var(--qix-dark-gray) 100%);
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding-top: 60px;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    box-shadow: 5px 0 25px rgba(0,0,0,0.5);
 }
 
 .sidebar.open {
-    width: 280px;
+    width: min(320px, 85vw);
+}
+
+.sidebar .logo-container {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid var(--qix-red);
+    margin-bottom: 20px;
+    background: rgba(236, 6, 43, 0.1);
+}
+
+.sidebar .logo-container img {
+    max-width: 150px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.sidebar .menu-title {
+    color: var(--qix-red);
+    font-size: clamp(12px, 3vw, 14px);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 25px 15px;
+    font-weight: 900;
+    position: relative;
+}
+
+.sidebar .menu-title::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 25px;
+    width: 30px;
+    height: 2px;
+    background: var(--qix-red);
 }
 
 .sidebar a {
-    padding: 15px 25px;
+    padding: 18px 25px;
     text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
-    transition: 0.3s;
+    font-size: clamp(16px, 4vw, 18px);
+    color: var(--qix-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
-    background-color: rgba(255,255,255,0.1);
+    color: var(--qix-red);
+    background: linear-gradient(90deg, rgba(236, 6, 43, 0.1), transparent);
+    transform: translateX(15px);
+    padding-left: 35px;
+}
+
+.sidebar a svg {
+    transition: transform 0.3s ease;
+}
+
+.sidebar a:hover svg {
     transform: translateX(10px);
 }
 
 .sidebar .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    top: 15px;
+    right: 25px;;
     color: white;
     cursor: pointer;
-}
-
-.sidebar .closebtn:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .logo-container {
-    text-align: center;
-    padding: 20px;
-    border-bottom: 2px solid rgba(255,255,255,0.2);
-    margin-bottom: 20px;
-}
-
-.sidebar .logo-container img {
-    max-width: 120px;
-    height: auto;
-}
-
-.sidebar .menu-title {
-    color: rgba(255,255,255,0.8);
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 20px 25px 10px;
-    font-weight: 600;
-}
-
-.sidebar .menu-section {
-    margin-bottom: 30px;
-}
-
-.sidebar .menu-section:last-child {
-    margin-bottom: 0;
-}
-
-/* Botão hambúrguer personalizado */
-.hamburger-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
     transition: all 0.3s ease;
 }
 
-.hamburger-btn:hover {
-    background-color: rgba(0,0,0,0.1);
-    transform: scale(1.1);
+.sidebar .closebtn:hover {
+    color: red;
+    position: absolute;
+ 
+   
 }
 
-/* Header simplificado */
-.mobile-header {
-    background: white;
-    padding: 15px 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* Video Container QIX Style */
+.video-container {
+    width: 100%;
+    height: 60vh;
+    min-height: 350px;
+    max-height: 700px;
+    overflow: hidden;
     position: relative;
-    z-index: 999;
+    background: var(--qix-black);
 }
 
-.mobile-header .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mobile-header .logo {
-    max-height: 40px;
-}
-
-/* Overlay para fechar o menu */
-.sidebar-overlay {
-    position: fixed;
+.video-container::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    background: linear-gradient(45deg, rgba(236, 6, 43, 0.3), transparent 50%);
+    z-index: 1;
+    pointer-events: none;
 }
 
-.sidebar-overlay.active {
-    opacity: 1;
-    visibility: visible;
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .sidebar.open {
-        width: 83%;
-    }
-    
-    .sidebar a {
-        font-size: 20px;
-        padding: 20px 30px;
-    }
-}
-.products-carousel {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding: 20px 0;
+/* Carousel de promoções QIX Style */
+.carousel {
+    background: linear-gradient(135deg, var(--qix-black) 0%, var(--qix-dark-gray) 100%);
 }
 
+.carousel-inner {
+    padding: 20px;
+}
+
+.carousel-item {
+    text-align: center;
+}
+
+.carousel-item p {
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 700;
+    color: var(--qix-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Products Section QIX Style */
+.products-carousel-wrapper {
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: var(--qix-light-gray);
+    position: relative;
+}
+
+.products-carousel-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--qix-red), var(--qix-orange), var(--qix-yellow));
+}
+
+.products-carousel-wrapper h2 {
+    font-size: clamp(28px, 7vw, 42px);
+    color: var(--qix-black);
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    font-family: var(--font-primary);
+    text-shadow: 2px 2px 0px var(--qix-red);
+}
+
+.products-carousel-wrapper h2::before {
+    content: '🔥';
+    font-size: 0.8em;
+    margin-right: 15px;
+}
+
+.products-carousel-wrapper p {
+    font-size: clamp(16px, 4vw, 20px);
+    color: var(--qix-gray);
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Product Cards QIX Style */
 .products-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0 60px; /* espaço para os botões laterais */
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 10px 40px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-/* Estilos específicos para o design QIX Skate Shop */
+.products-track::-webkit-scrollbar {
+    display: none;
+}
+
 .product-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    width: 300px;
-    min-width: 300px;
+    background: var(--qix-white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    width: min(320px, 85vw);
+    min-width: min(320px, 85vw);
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 20px;
-    transition: all 0.3s ease;
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
-    border: 1px solid #f0f0f0;
+    border: 3px solid transparent;
+    overflow: hidden;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(236, 6, 43, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.product-card:hover::before {
+    opacity: 1;
+    animation: shimmer 1.5s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    border-color: #EC062B;
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(236, 6, 43, 0.3);
+    border-color: var(--qix-red);
 }
 
 .product-badge {
     position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: #EC062B;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 1;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, var(--qix-red), var(--qix-orange));
+    color: var(--qix-white);
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: clamp(11px, 2.8vw, 13px);
+    font-weight: 900;
+    z-index: 2;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-family: var(--font-primary);
+    box-shadow: 0 4px 15px rgba(236, 6, 43, 0.4);
 }
 
 .product-image {
@@ -209,95 +382,358 @@
     justify-content: center;
     margin-bottom: 20px;
     overflow: hidden;
-    border-radius: 10px;
-    background-color: #f8f9fa;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(135deg, var(--qix-light-gray), #e0e0e0);
+    position: relative;
+}
+
+.product-image img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.product-info {
+    padding: 0 25px 30px;
 }
 
 .product-title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-    height: 48px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    line-height: 1.4;
+    font-size: clamp(15px, 3.8vw, 18px);
+    font-weight: 700;
+    color: var(--qix-black);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    font-family: var(--font-primary);
 }
 
 .product-category {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 12px;
+    font-size: clamp(11px, 2.8vw, 13px);
+    color: var(--qix-red);
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
+    letter-spacing: 2px;
+    font-weight: 900;
+    font-family: var(--font-primary);
 }
 
 .product-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #EC062B;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
 
 .product-price .old-price {
-    font-size: 14px;
+    font-size: clamp(14px, 3.5vw, 16px);
     color: #999;
     text-decoration: line-through;
-    font-weight: normal;
+    font-weight: 500;
+}
+
+.product-price .current-price {
+    font-size: clamp(18px, 4.5vw, 24px);
+    font-weight: 900;
+    color: var(--qix-red);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .add-to-cart-btn {
-    background-color: #000;
-    color: white;
-    padding: 14px 24px;
+    background: linear-gradient(135deg, var(--qix-black), var(--qix-dark-gray));
+    color: var(--qix-white);
+    padding: 18px 25px;
     border: none;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
+    border-radius: 50px;
+    font-size: clamp(13px, 3.3vw, 15px);
+    font-weight: 900;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     width: 100%;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    font-family: var(--font-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.add-to-cart-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--qix-red), var(--qix-orange));
+    transition: left 0.4s ease;
+}
+
+.add-to-cart-btn:hover::before {
+    left: 0;
 }
 
 .add-to-cart-btn:hover {
-    background-color: #EC062B;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(236, 6, 43, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(236, 6, 43, 0.4);
 }
 
-/* Botão Ver todos os produtos */
-.view-all-section {
+.add-to-cart-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* CTA Section QIX Style */
+.container-CTA {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--qix-black) 0%, var(--qix-dark-gray) 50%, var(--qix-red) 100%);
+    color: var(--qix-white);
+    position: relative;
+}
+
+.container-CTA::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(236, 6, 43, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.container-CTA .kit-img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-CTA .kit-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease;
+}
+
+.container-CTA .kit-img:hover img {
+    transform: scale(1.05);
+}
+
+.container-products-description {
+    width: 100%;
+    max-width: 700px;
     text-align: center;
-    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.container-products-description h2 {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 30px;
+    color: var(--qix-white);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    font-family: var(--font-primary);
+}
+
+.container-products-description .description p {
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .view-all-btn {
     display: inline-block;
-    background-color: #000;
-    color: white;
-    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--qix-white), #f0f0f0);
+    color: var(--qix-black);
+    padding: 20px 40px;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-size: clamp(16px, 4vw, 20px);
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all 0.3s ease;
-    border: 2px solid #000;
+    transition: all 0.4s ease;
+    border: 3px solid var(--qix-white);
+    font-family: var(--font-primary);
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.view-all-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--qix-red), var(--qix-orange));
+    transition: left 0.4s ease;
+}
+
+.view-all-btn:hover::before {
+    left: 0;
 }
 
 .view-all-btn:hover {
-    background-color: white;
-    color: #000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    color: var(--qix-white);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255,255,255,0.3);
+}
+
+.view-all-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Overlay QIX Style */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.8), rgba(236, 6, 43, 0.3));
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Media Queries QIX Style */
+@media (max-width: 480px) {
+    .products-track {
+        padding: 20px 5px 40px;
+        gap: 20px;
+    }
+    
+    .product-card {
+        width: 90vw;
+        min-width: 90vw;
+    }
+    
+    .mobile-header {
+        padding: 12px 15px;
+    }
+    
+    .container-CTA {
+        padding: 40px 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .products-track {
+        gap: 30px;
+        padding: 20px 40px 40px;
+    }
+    
+    .product-card {
+        width: 300px;
+        min-width: 300px;
+    }
+    
+    .video-container {
+        height: 70vh;
+    }
+    
+    .container-CTA {
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        padding: 80px 40px;
+    }
+    
+    .container-CTA .kit-img {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .container-products-description {
+        flex: 1;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-track {
+        gap: 35px;
+        padding: 20px 60px 40px;
+    }
+    
+    .video-container {
+        height: 75vh;
+    }
+    
+    .products-carousel-wrapper {
+        padding: 80px 60px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mobile-header .header-content {
+        padding: 0 40px;
+    }
+    
+    .products-carousel-wrapper {
+        padding: 100px 80px;
+    }
+    
+    .container-CTA {
+        padding: 100px 80px;
+    }
+}
+
+/* Animações específicas QIX */
+@keyframes pulse-red {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(236, 6, 43, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(236, 6, 43, 0); }
+}
+
+.product-badge {
+    animation: pulse-red 3s infinite;
+}
+
+/* Melhorias para acessibilidade QIX Style */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .product-badge {
+        animation: none;
+    }
+}
+
+/* Focus states para acessibilidade */
+.hamburger-btn:focus,
+.add-to-cart-btn:focus,
+.view-all-btn:focus,
+.sidebar a:focus {
+    outline: 3px solid var(--qix-yellow);
+    outline-offset: 2px;
 }

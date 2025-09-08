@@ -1,303 +1,544 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>QIX</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-        <link rel="stylesheet" href="index.css">
-      </head>
-  <body>
-    <!--site dimensão iphone 14 pro max
-    e commerce
-    1 etapa - 3 pages - home - produto - contato
-    TioBob - -->
-   
-   <!-- Menu lateral -->
-   <div id="mySidebar" class="sidebar">
-     <div class="logo-container">
-      
-     </div>
-     
-     <div class="menu-section">
-       <div class="menu-title">SALE</div>
-       <a id="SETA" href="./index.html">TÊNIS <svg width="3%" height="3%" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.41968 1.24677L6.46634 5.66276C6.50204 5.69405 6.53064 5.7326 6.55023 5.77583C6.56982 5.81906 6.57996 5.86597 6.57996 5.91343C6.57996 5.96089 6.56982 6.00781 6.55023 6.05104C6.53064 6.09427 6.50204 6.13281 6.46634 6.1641L1.41968 10.5801" stroke="#EC062B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg></a>
-       <a id="SETA" href="#">ROUPAS E ACESSÓRIOS <svg width="3%" height="3%" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1.41968 1.24677L6.46634 5.66276C6.50204 5.69405 6.53064 5.7326 6.55023 5.77583C6.56982 5.81906 6.57996 5.86597 6.57996 5.91343C6.57996 5.96089 6.56982 6.00781 6.55023 6.05104C6.53064 6.09427 6.50204 6.13281 6.46634 6.1641L1.41968 10.5801" stroke="#EC062B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg></a>
-        <a href="">CHORÃO ETERNO</a>
-        <a href="">KINGS</a>
-        <a href="">SABOTAGE</a>
-        <a href="">TODOS OS PRODUTOS</a>
-     </div>
-     
-     <div class="menu-section">
-       <div class="menu-title">Conta</div>
-       <a href="#">👤 Minha Conta</a>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QIX - Original Skateboard Since 1993</title>
+    <meta name="description" content="QIX - A sua marca de Streetwear e Skateboard. Qualidade, Conforto e Durabilidade desde 1993. Envio para todo Brasil.">
     
-     </div>
-     
-     <div class="menu-section">
-       <div class="menu-title">Suporte</div>
-       <a href="./sites/contact.html">📞 Contato</a>
-   
-     </div>
-     
-     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   </div>
-
-   <!-- Overlay -->
-   <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeNav()"></div>
-
-   <!--header-->
-   <header class="mobile-header">
-     <div class="header-content">
-       <button class="hamburger-btn" onclick="openNav()">
-         ☰
-       </button>
-       <a href="./index.html">
-         <img src="./imgs/logo-QIX-mobile.svg" alt="TioBob" class="logo">
-       </a>
-       <div style="width: 40px;"></div> <!-- Espaçador para centralizar o logo -->
-     </div>
-   </header>
-   <!--fim header-->
-  <main>
-  <div style="margin: 0; width: 430px; height: 559.92px;">
-    <video style="width: 430px; height: 559.92px; margin: 0;" src="./imgs/video-carrousel.mp4" autoplay muted loop></video>
-  </div>
-
-  <div id="carouselExample" class="carousel slide" style="background-color:black; margin: 0;">
-    <div class="carousel-inner" style="display: flex; align-items: center;padding-left: 25%;padding-top: 5%;">
-      <div class="carousel-item active" style="color: white;">
-        <p>10% de desconto à vista no PIX</p>
-      </div>
-      <div class="carousel-item" style="color: white;">
-        <p>Até 4X sem juros no cartão</p>
-      </div>
-      <div class="carousel-item" style="color: white;">
-        <p>5% off usando o cupom - QIXWELCOME</p>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-
-  </div>
-
-
-
-  <!--fim carousel-->
-
-   <!-- Carousel 2 customizado -->
-<div class="products-carousel-wrapper">
-  <h2 class="text-center mt-5">🔥 ÚLTIMOS LANÇAMENTOS</h2>
-  <p class="text-center mb-4">As novidades mais pesadas da QIX</p>
-
-  <div class="products-carousel">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     
-    <div class="products-track" id="productsTrack">
-      <!-- Produto 1 -->
-      <div class="product-card">
-        <div class="product-badge">10% NO PIX</div>
-        <div class="product-image">
-          <img src="https://via.placeholder.com/200x200/333333/FFFFFF?text=QIX+90's+Pro" alt="Produto 1">
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Tênis Qix 90's Pro Series William Damascena</h3>
-          <p class="product-category">TÊNIS</p>
-          <div class="product-price">
-            <span class="old-price">R$ 399,90</span>
-            <span class="current-price">R$ 359,91 via PIX!</span>
-          </div>
-          <button class="add-to-cart-btn">🛒 Adicionar ao Carrinho</button>
-        </div>
-      </div>
-      <!-- Produto 2 -->
-      <div class="product-card">
-        <div class="product-badge">10% NO PIX</div>
-        <div class="product-image">
-          <img src="https://via.placeholder.com/200x200/333333/FFFFFF?text=QIX+90's+Pro" alt="Produto 2">
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Tênis Qix 90's Pro Series William Damascena</h3>
-          <p class="product-category">TÊNIS</p>
-          <div class="product-price">
-            <span class="old-price">R$ 399,90</span>
-            <span class="current-price">R$ 359,91 via PIX!</span>
-          </div>
-          <button class="add-to-cart-btn">🛒 Adicionar ao Carrinho</button>
-        </div>
-      </div>
-      <!-- Produto 3 -->
-      <div class="product-card">
-        <div class="product-badge">10% NO PIX</div>
-        <div class="product-image">
-          <img src="https://via.placeholder.com/200x200/333333/FFFFFF?text=QIX+90's+Pro" alt="Produto 3">
-        </div>
-        <div class="product-info">
-          <h3 class="product-title">Tênis Qix 90's Pro Series William Damascena</h3>
-          <p class="product-category">TÊNIS</p>
-          <div class="product-price">
-            <span class="old-price">R$ 399,90</span>
-            <span class="current-price">R$ 359,91 via PIX!</span>
-          </div>
-          <button class="add-to-cart-btn">🛒 Adicionar ao Carrinho</button>
-        </div>
-      </div>
-
-    </div>
+    <!-- Google Fonts para tipografia QIX -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-  </div>
-</div>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./imgs/logo-QIX-mobile.svg">
+</head>
 
-   
-   <!--fim carousel 2-->
-   
-   <!-- Carousel 3  -->
-   <div class="products-carousel-wrapper">
-    <h2 class="text-center mt-5">🔥MAIS VENDIDOS</h2>
-    <p class="text-center mb-4">As novidades mais pesadas da QIX</p>
-  
-    <div class="products-carousel">
-      
-      <div class="products-track" id="productsTrack">
-        <!-- Produto 1 -->
-        <div class="product-card">
-          <div class="product-badge">10% NO PIX</div>
-          <div class="product-image">
-            <img src="https://via.placeholder.com/200x200/333333/FFFFFF?text=QIX+90's+Pro" alt="Produto 1">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Tênis Qix 90's Pro Series William Damascena</h3>
-            <p class="product-category">TÊNIS</p>
-            <div class="product-price">
-              <span class="old-price">R$ 399,90</span>
-              <span class="current-price">R$ 359,91 via PIX!</span>
-            </div>
-            <button class="add-to-cart-btn">🛒 Adicionar ao Carrinho</button>
-          </div>
+<body> 
+    <!-- Menu lateral QIX Style -->
+    <div id="mySidebar" class="sidebar">
+        <div class="logo-container">
+            <img src="./imgs/logo-QIX-mobile.svg" alt="QIX Logo" />
         </div>
-        <!-- Produto 2 -->
-        <div class="product-card">
-          <div class="product-badge">10% NO PIX</div>
-          <div class="product-image">
-            <img src="https://via.placeholder.com/200x200/333333/FFFFFF?text=QIX+90's+Pro" alt="Produto 2">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Tênis Qix 90's Pro Series William Damascena</h3>
-            <p class="product-category">TÊNIS</p>
-            <div class="product-price">
-              <span class="old-price">R$ 399,90</span>
-              <span class="current-price">R$ 359,91 via PIX!</span>
-            </div>
-            <button class="add-to-cart-btn">🛒 Adicionar ao Carrinho</button>
-          </div>
+        
+        <div class="menu-section">
+            <div class="menu-title">🔥 SALE</div>
+            <a href="./index.html">
+                TÊNIS 
+                <svg width="12" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41968 1.24677L6.46634 5.66276C6.50204 5.69405 6.53064 5.7326 6.55023 5.77583C6.56982 5.81906 6.57996 5.86597 6.57996 5.91343C6.57996 5.96089 6.56982 6.00781 6.55023 6.05104C6.53064 6.09427 6.50204 6.13281 6.46634 6.1641L1.41968 10.5801" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </a>
+            <a href="#">
+                ROUPAS & ACESSÓRIOS 
+                <svg width="12" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.41968 1.24677L6.46634 5.66276C6.50204 5.69405 6.53064 5.7326 6.55023 5.77583C6.56982 5.81906 6.57996 5.86597 6.57996 5.91343C6.57996 5.96089 6.56982 6.00781 6.55023 6.05104C6.53064 6.09427 6.50204 6.13281 6.46634 6.1641L1.41968 10.5801" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </a>
+            <a href="#">CHORÃO ETERNO</a>
+            <a href="#">KINGS</a>
+            <a href="#">SABOTAGE</a>
+            <a href="#">TODOS OS PRODUTOS</a>
         </div>
-        <!-- Produto 3 -->
-        <div class="product-card">
-          <div class="product-badge">10% NO PIX</div>
-          <div class="product-image">
-            <img src="https://via.placeholder.com/200x200/333333/FFFFFF?text=QIX+90's+Pro" alt="Produto 3">
-          </div>
-          <div class="product-info">
-            <h3 class="product-title">Tênis Qix 90's Pro Series William Damascena</h3>
-            <p class="product-category">TÊNIS</p>
-            <div class="product-price">
-              <span class="old-price">R$ 399,90</span>
-              <span class="current-price">R$ 359,91 via PIX!</span>
-            </div>
-            <button class="add-to-cart-btn">🛒 Adicionar ao Carrinho</button>
-          </div>
+        
+        
+        <div class="menu-section">
+           
+            <a href="./sites/contact.html">CONTATO</a>
+           
         </div>
-  
-      </div>
-      
+        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
     </div>
-  </div>
 
+    <!-- Overlay -->
+     
 
-<!--fim section produtos-->
+    <!-- Header QIX Style -->
+    <header class="mobile-header">
+        <div class="header-content">
+            <button class="hamburger-btn" onclick="openNav()" aria-label="Abrir menu">
+                <span>☰</span>
+            </button>
+            <a href="./index.html">
+                <img src="./imgs/logo-QIX-mobile.svg" alt="QIX - Original Skateboard Since 1993" class="logo">
+            </a>
+            <div style="width: 50px;">
+                <button style="background: none; border: none; font-size: 24px; cursor: pointer;" aria-label="Carrinho de compras">
+                  <ion-icon name="cart-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </header>
 
-</main>
-<!--footer -->
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top "> 
-  <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p>
-   <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none" aria-label="Bootstrap"> 
-    <svg class="bi me-2" width="40" height="32" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> 
-  </a> 
-  <ul class="nav col-md-4 justify-content-end"> 
-    <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li> 
-    <li class="nav-item"><a href="./sites/contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li> 
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li> 
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> 
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> 
-  </ul>
- </footer>
+    <main>
+        <!-- Vídeo Hero QIX Style -->
+        <div class="video-container">
+            <video autoplay muted loop playsinline preload="metadata">
+                <source src="./imgs/video-carrousel.mp4" type="video/mp4">
+                <source src="./imgs/video-carrousel.webm" type="video/webm">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </div>
 
+        <!-- Carousel de promoções QIX Style -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center align-items-center py-3">
+                        <p class="mb-0">💥 10% DE DESCONTO À VISTA NO PIX</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center py-3">
+                        <p class="mb-0">💳 ATÉ 4X SEM JUROS NO CARTÃO</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center py-3">
+                        <p class="mb-0">🎉 5% OFF COM CUPOM QIXWELCOME</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center align-items-center py-3">
+                        <p class="mb-0">🚚 FRETE GRÁTIS ACIMA DE R$ 199</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
 
+        <!-- Últimos lançamentos QIX Style -->
+        <section class="products-carousel-wrapper">
+            <h2>ÚLTIMOS LANÇAMENTOS</h2>
+            <p>As novidades mais pesadas da QIX acabaram de chegar</p>
 
+            <div class="products-carousel">
+                <div class="products-track" id="productsTrack1">
+                    <!-- Card 1 - Tênis QIX -->
+                    <article class="product-card">
+                        <div class="product-badge">NOVO</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+TENIS" alt="Tênis QIX 90's Pro Series" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tênis QIX 90's Pro Series William Damascena</h3>
+                            <p class="product-category">TÊNIS</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 399,90</span>
+                                <span class="current-price">R$ 359,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar tênis QIX 90's Pro ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 2 - Skate -->
+                    <article class="product-card">
+                        <div class="product-badge">HOT</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+SKATE" alt="Skate Completo QIX Street Pro" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Skate Completo QIX Street Pro 8.0"</h3>
+                            <p class="product-category">SKATE</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 349,90</span>
+                                <span class="current-price">R$ 314,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar skate QIX Street Pro ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 3 - Camiseta -->
+                    <article class="product-card">
+                        <div class="product-badge">OFERTA</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+SHIRT" alt="Camiseta QIX Classic Logo" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Camiseta QIX Classic Logo Preta</h3>
+                            <p class="product-category">ROUPAS</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 89,90</span>
+                                <span class="current-price">R$ 80,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar camiseta QIX Classic ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 4 - Boné -->
+                    <article class="product-card">
+                        <div class="product-badge">EXCLUSIVO</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+CAP" alt="Boné QIX Snapback" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Boné QIX Snapback Original</h3>
+                            <p class="product-category">ACESSÓRIOS</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 119,90</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar boné QIX Snapback ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 5 - Moletom -->
+                    <article class="product-card">
+                        <div class="product-badge">BESTSELLER</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+HOODIE" alt="Moletom QIX Urban" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Moletom QIX Urban Style Com Capuz</h3>
+                            <p class="product-category">ROUPAS</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 199,90</span>
+                                <span class="current-price">R$ 179,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar moletom QIX Urban ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
+            <!-- Botão Ver Mais -->
+            <div class="text-center mt-4">
+                <a href="#" class="view-all-btn">
+                    <span>VER TODOS OS LANÇAMENTOS</span>
+                </a>
+            </div>
+        </section>
 
+        <!-- Mais vendidos QIX Style -->
+        <section class="products-carousel-wrapper">
+            <h2>MAIS VENDIDOS</h2>
+            <p>Os favoritos da galera QIX não param de sair</p>
 
+            <div class="products-carousel">
+                <div class="products-track" id="productsTrack2">
+                    <!-- Card 1 -->
+                    <article class="product-card">
+                        <div class="product-badge">TOP 1</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+CLASSIC" alt="Tênis QIX Classic Black" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Tênis QIX Classic Black</h3>
+                            <p class="product-category">TÊNIS</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 279,90</span>
+                                <span class="current-price">R$ 251,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar tênis QIX Classic ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 2 -->
+                    <article class="product-card">
+                        <div class="product-badge">TOP 2</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+LOGO" alt="Camiseta QIX Logo Branca" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Camiseta QIX Logo Branca</h3>
+                            <p class="product-category">ROUPAS</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar camiseta QIX Logo ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 3 -->
+                    <article class="product-card">
+                        <div class="product-badge">TOP 3</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+BOARD" alt="Shape QIX 8.0 Street" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Shape QIX 8.0" Street Maple</h3>
+                            <p class="product-category">SKATE</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 149,90</span>
+                                <span class="current-price">R$ 134,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar shape QIX 8.0 ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
 
+                    <!-- Card 4 -->
+                    <article class="product-card">
+                        <div class="product-badge">IMPERDÍVEL</div>
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/280x200/2a2a2a/FFFFFF?text=QIX+SHORTS" alt="Bermuda QIX Cargo" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Bermuda QIX Cargo Preta</h3>
+                            <p class="product-category">ROUPAS</p>
+                            <div class="product-price">
+                                <span class="old-price">R$ 159,90</span>
+                                <span class="current-price">R$ 143,91 NO PIX</span>
+                            </div>
+                            <button class="add-to-cart-btn" aria-label="Adicionar bermuda QIX Cargo ao carrinho">
+                                <span>🛒 ADICIONAR AO CARRINHO</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-  
-  <script>
-    const track = document.getElementById('productsTrack');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
+            <!-- Botão Ver Mais -->
+            <div class="text-center mt-4">
+                <a href="#" class="view-all-btn">
+                    <span>VER TODOS OS PRODUTOS</span>
+                </a>
+            </div>
+        </section>
 
-  const scrollAmount = 320; // Largura de um card + margem
+        <!-- CTA Kit 3 camisas QIX Style -->
+        <section class="container-CTA">
+            <div class="kit-img">
+                <img src="./imgs/kit-camisas.webp" alt="Kit 3 Camisetas QIX - Promoção Especial" loading="lazy">
+            </div>
+            <div class="container-products-description">
+                <h2>KIT 3 CAMISETAS</h2>
+                <div class="description">
+                    <p><strong>COMBO ESPECIAL:</strong> Compre 3 camisetas da linha QIX Basic por apenas <strong>R$ 249,90</strong></p>
+                    <p>Basta adicionar as 3 camisetas escolhidas ao carrinho e o desconto será aplicado automaticamente.</p>
+                    <p><em>⏰ Promoção por tempo limitado - aproveite!</em></p>
+                    <a href="#" class="view-all-btn">
+                        <span>MONTAR MEU KIT</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-  prevBtn.addEventListener('click', () => {
-    track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  });
+        <!-- Seção de Categorias QIX Style -->
+        <section class="categories-section" style="background: var(--qix-light-gray); padding: 80px 20px;">
+            <div style="max-width: 1400px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: clamp(28px, 7vw, 42px); margin-bottom: 50px; color: var(--qix-black); font-family: var(--font-primary);">EXPLORE NOSSAS CATEGORIAS</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div style="background: var(--qix-white); border-radius: 20px; padding: 40px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="font-size: 60px; margin-bottom: 20px;">👟</div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px; color: var(--qix-black); font-family: var(--font-primary);">TÊNIS</h3>
+                        <p style="color: var(--qix-gray); margin-bottom: 25px;">Conforto e estilo para suas manobras</p>
+                        <a href="#" style="color: var(--qix-red); font-weight: bold; text-decoration: none; text-transform: uppercase;">Ver Tênis →</a>
+                    </div>
+                    
+                    <div style="background: var(--qix-white); border-radius: 20px; padding: 40px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="font-size: 60px; margin-bottom: 20px;">🛹</div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px; color: var(--qix-black); font-family: var(--font-primary);">SKATES</h3>
+                        <p style="color: var(--qix-gray); margin-bottom: 25px;">Shapes e completos profissionais</p>
+                        <a href="#" style="color: var(--qix-red); font-weight: bold; text-decoration: none; text-transform: uppercase;">Ver Skates →</a>
+                    </div>
+                    
+                    <div style="background: var(--qix-white); border-radius: 20px; padding: 40px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="font-size: 60px; margin-bottom: 20px;">👕</div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px; color: var(--qix-black); font-family: var(--font-primary);">ROUPAS</h3>
+                        <p style="color: var(--qix-gray); margin-bottom: 25px;">Street Style autêntico</p>
+                        <a href="#" style="color: var(--qix-red); font-weight: bold; text-decoration: none; text-transform: uppercase;">Ver Roupas →</a>
+                    </div>
+                    
+                    <div style="background: var(--qix-white); border-radius: 20px; padding: 40px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
+                        <div style="font-size: 60px; margin-bottom: 20px;">🧢</div>
+                        <h3 style="font-size: 24px; margin-bottom: 15px; color: var(--qix-black); font-family: var(--font-primary);">ACESSÓRIOS</h3>
+                        <p style="color: var(--qix-gray); margin-bottom: 25px;">Complete seu look</p>
+                        <a href="#" style="color: var(--qix-red); font-weight: bold; text-decoration: none; text-transform: uppercase;">Ver Acessórios →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  nextBtn.addEventListener('click', () => {
-    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  });
-    // Função para abrir o menu lateral
-    function openNav() {
-      document.getElementById("mySidebar").classList.add("open");
-      document.getElementById("sidebarOverlay").classList.add("active");
-      document.body.style.overflow = 'hidden'; // Previne scroll da página
-    }
+    <!-- Footer QIX Style -->
+    <footer style="background: var(--qix-black); color: var(--qix-white); padding: 60px 20px 30px;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <!-- Logo e descrição -->
+                <div>
+                    <img src="./imgs/logo-QIX-mobile.svg" alt="QIX Logo" style="max-width: 120px; margin-bottom: 20px; filter: brightness(0) invert(1);">
+                    <p style="line-height: 1.6; margin-bottom: 20px;">Desde 1993 no mercado, a QIX é referência em streetwear e skateboard no Brasil. Qualidade, conforto e durabilidade.</p>
+                    <div>
+                        <a href="#" style="color: var(--qix-white); font-size: 24px; margin-right: 15px;">📘</a>
+                        <a href="#" style="color: var(--qix-white); font-size: 24px; margin-right: 15px;">📷</a>
+                        <a href="#" style="color: var(--qix-white); font-size: 24px; margin-right: 15px;">📺</a>
+                    </div>
+                </div>
+                
+                <!-- Links úteis -->
+                <div>
+                    <h4 style="color: var(--qix-red); margin-bottom: 20px; font-family: var(--font-primary);">LINKS ÚTEIS</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="./index.html" style="color: var(--qix-white); text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: var(--qix-white); text-decoration: none;">Produtos</a></li>
+                        <li style="margin-bottom: 10px;"><a href="./sites/contact.html" style="color: var(--qix-white); text-decoration: none;">Contato</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: var(--qix-white); text-decoration: none;">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Atendimento -->
+                <div>
+                    <h4 style="color: var(--qix-red); margin-bottom: 20px; font-family: var(--font-primary);">ATENDIMENTO</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: var(--qix-white); text-decoration: none;">Central de Ajuda</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: var(--qix-white); text-decoration: none;">Trocas e Devoluções</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: var(--qix-white); text-decoration: none;">Entrega e Frete</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: var(--qix-white); text-decoration: none;">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 style="color: var(--qix-red); margin-bottom: 20px; font-family: var(--font-primary);">NEWSLETTER</h4>
+                    <p style="margin-bottom: 20px;">Receba novidades e promoções exclusivas</p>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="email" placeholder="Seu e-mail" style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 14px;">
+                        <button style="background: var(--qix-red); color: var(--qix-white); border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: bold;">OK</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="margin: 0; color: rgba(255,255,255,0.7);">© 2025 QIX International. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-    // Função para fechar o menu lateral
-    function closeNav() {
-      document.getElementById("mySidebar").classList.remove("open");
-      document.getElementById("sidebarOverlay").classList.remove("active");
-      document.body.style.overflow = 'auto'; // Restaura scroll da página
-    }
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    
+    <script>
+        // Função para abrir o menu lateral
+        function openNav() {
+            document.getElementById("mySidebar").classList.add("open");
+            document.getElementById("sidebarOverlay").classList.add("active");
+            document.body.style.overflow = 'hidden';
+        }
 
-    // Fechar menu ao pressionar ESC
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeNav();
-      }
-    });
+        // Função para fechar o menu lateral
+        function closeNav() {
+            document.getElementById("mySidebar").classList.remove("open");
+            document.getElementById("sidebarOverlay").classList.remove("active");
+            document.body.style.overflow = 'auto';
+        }
 
-    // Fechar menu ao redimensionar a tela (para desktop)
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768) {
-        closeNav();
-      }
-    });
-  </script>
-  </body>
+        // Fechar menu ao pressionar ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeNav();
+            }
+        }); 
+
+        // Fechar menu ao redimensionar para desktop
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeNav();
+            }
+        });
+
+        // Scroll suave para carousels de produtos
+        document.querySelectorAll('.products-track').forEach(track => {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            track.addEventListener('mousedown', (e) => {
+                isDown = true;
+                track.classList.add('active');
+                startX = e.pageX - track.offsetLeft;
+                scrollLeft = track.scrollLeft;
+            });
+
+            track.addEventListener('mouseleave', () => {
+                isDown = false;
+                track.classList.remove('active');
+            });
+
+            track.addEventListener('mouseup', () => {
+                isDown = false;
+                track.classList.remove('active');
+            });
+
+            track.addEventListener('mousemove', (e) => {
+                if(!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - track.offsetLeft;
+                const walk = (x - startX) * 2;
+                track.scrollLeft = scrollLeft - walk;
+            });
+        });
+
+        // Animações no scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animação
+        document.querySelectorAll('.product-card, .products-carousel-wrapper').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Auto-play do carousel com pausa no hover
+        const carousel = new bootstrap.Carousel('#carouselExample', {
+            interval: 4000,
+            wrap: true
+        });
+
+        document.getElementById('carouselExample').addEventListener('mouseenter', () => {
+            carousel.pause();
+        });
+
+        document.getElementById('carouselExample').addEventListener('mouseleave', () => {
+            carousel.cycle();
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
 </html>
